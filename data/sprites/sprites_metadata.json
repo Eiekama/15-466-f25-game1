@@ -1,0 +1,30 @@
+[
+    {
+        "name": "maiden1",
+        "file": "maiden.png",
+        "palette_indices": [0, 0, 0,-1,-1,
+                            0, 0, 0, 0,-1,
+                            0, 1, 1, 3, 3,
+                            2, 0, 0, 2,-1,
+                           -1, 0, 0,-1,-1]
+    },
+    {
+        "name": "maiden2",
+        "file": "maiden.png",
+        "palette_indices": [4, 4, 4,-1,-1,
+                            4, 4, 4, 4,-1,
+                            4, 5, 5, 7, 7,
+                            6, 4, 4, 6,-1,
+                           -1, 4, 4,-1,-1]
+    },
+    {
+        "name": "orb1",
+        "file": "orb.png",
+        "palette_indices": [3]
+    },
+    {
+        "name": "orb2",
+        "file": "orb.png",
+        "palette_indices": [7]
+    }
+]

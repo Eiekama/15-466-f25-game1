@@ -1,4 +1,5 @@
 #include "PPU466.hpp"
+#include "Sprites.hpp"
 #include "Mode.hpp"
 
 #include <glm/glm.hpp>
@@ -21,15 +22,21 @@ struct PlayMode : Mode {
 	struct Button {
 		uint8_t downs = 0;
 		uint8_t pressed = 0;
-	} left, right, down, up;
+	} left, right, down, up,
+	  w, a, s, d,
+	  z, x,
+	  n, m;
 
 	//some weird background animation:
 	float background_fade = 0.0f;
 
 	//player position:
-	glm::vec2 player_at = glm::vec2(0.0f);
+	glm::vec2 player1_at = glm::vec2(50, 120);
+	glm::vec2 player2_at = glm::vec2(150, 120);
 
 	//----- drawing handled by PPU466 -----
+	
+	Sprites sprites;
 
 	PPU466 ppu;
 };
