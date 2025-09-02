@@ -145,3 +145,23 @@ void PlayMode::draw(glm::uvec2 const &drawable_size) {
 	//--- actually draw ---
 	ppu.draw(drawable_size);
 }
+
+
+void PlayMode::Projectiles::Projectile::spawn(glm::vec2 p, glm::vec2 v) {
+	x = p.x;
+	y = p.y;
+	velocity = v;
+	active = true;
+}
+
+void PlayMode::Projectiles::Projectile::update(float elapsed) {
+	if (active) {
+		x += velocity.x * elapsed;
+		y += velocity.y * elapsed;
+		if (x <= 0 || x > 256 || y <= 0 || y > 256) {
+			active = false;
+			x = -8;
+			y = -8;
+		}
+	}
+}

@@ -1,22 +1,29 @@
-# (TODO: your game's title)
+# Magical Girl Pew Pew
 
-Author: (TODO: your name)
+Author: Jingxuan Chen
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+## Design:
+Basically a ripoff of Maiden and Spell, since I played it once and felt it was a fun party game. It is a PvP bullet hell, with each player shooting bullets and trying to hit the other player.
 
-Screen Shot:
+## Screen Shot:
 
 ![Screen Shot](screenshot.png)
 
-How Your Asset Pipeline Works:
+## How Your Asset Pipeline Works:
 
-(TODO: describe the steps in your asset pipeline, from source files to tiles/backgrounds/whatever you upload to the PPU466.)
+The asset pipeline takes in png files and a json file with some metadata. A python file processes those inputs into a binary file that can be directly loaded into the relevant data structures in cpp. I made an intermediate Sprites class to store some data that's relevant to be able to render a multitile sprite.
 
-(TODO: make sure the source files you drew are included. You can [link](your/file.png) to them to be a bit fancier.)
+<!-- (TODO: make sure the source files you drew are included. You can [link](your/file.png) to them to be a bit fancier.) -->
 
-How To Play:
+## How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+### Player 1:
+WASD to move
+
+### Player 2:
+Arrow keys to move
+
+Ran out of time to implement shooting projectiles :(
 
 This game was built with [NEST](NEST.md).
 

@@ -2,6 +2,7 @@
 #include "Sprites.hpp"
 #include "Mode.hpp"
 
+#include <_types/_uint8_t.h>
 #include <glm/glm.hpp>
 
 #include <vector>
@@ -33,6 +34,19 @@ struct PlayMode : Mode {
 	//player position:
 	glm::vec2 player1_at = glm::vec2(50, 120);
 	glm::vec2 player2_at = glm::vec2(150, 120);
+
+	struct Projectiles {
+		struct Projectile {
+			uint8_t x;
+			uint8_t y;
+			glm::vec2 velocity;
+			bool active = false;
+			uint8_t sprite_index;
+			void spawn(glm::vec2 v);
+			void update();
+		};
+		std::array< Projectile, 14 > projectiles;
+	};
 
 	//----- drawing handled by PPU466 -----
 	
