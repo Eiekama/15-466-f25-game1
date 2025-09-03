@@ -43,7 +43,7 @@ struct PlayMode : Mode {
 			bool active = false;
 			uint8_t sprite_index;
 			void spawn(glm::vec2 v);
-			void update();
+			void update(float elapsed);
 		};
 		std::array< Projectile, 14 > projectiles;
 	};
